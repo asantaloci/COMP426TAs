@@ -8,7 +8,7 @@
     <meta name="generator" content="Jekyll v3.8.5">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
 
   </head>
   <body>
@@ -37,7 +37,10 @@
 
               <h2 class="tripshare-title">TripShare</h2>
 
-          <!-- in the actual one, make it so that the div class is "post"+ID -->
+              <button id="newtweet">+</button>
+                 <div id ="createtweet" style="display:none"></div>
+
+
           <div class="post">
             <div class="info">
               <!-- <div class="profile"> </div> -->
@@ -49,7 +52,7 @@
 
                   <div class="post-content">
                     <div class="caption">
-                      whfdosf
+                      I took a trip to NYC from Charlotte.
                     </div>
                       <div id="mapcontent">
                       <div id="map"></div>
@@ -69,9 +72,12 @@
 
 
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
   <script src="load.js"></script>
   <script src="render.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk_u1OtCH9Oz4JLHi1nqO5aA_6DGRJ0QQ&callback=initMap"
     async defer></script>
