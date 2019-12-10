@@ -1,53 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <title>Tripshare</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Jekyll v3.8.5">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 
-        <title>Login to COMP 426</title>
-
-        <!-- Include links to CSS stylesheets below -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-
-    <body>
-        <div id="login">
-            <div class="login-card">
-                <div class="card-title">
-                    <h1>TripShare Login</h1>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <nav role="navigation">
+                <div id="menuToggle">
+                   <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                  <ul id="menu">
+                    <a href="#"><li>Feed</li></a>
+                    <a href="#"><li>Settings</li></a>
+                    <a href="#"><li>About</li></a>
+                  </ul>
                 </div>
+      </nav> -->
+      <div class="page js-page">
+        <a href="#" class="nav-icon js-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+          <div class="content">
 
-                <div class="content">
-                    <form id="login-form">
-                        <input id="login-username" type="username" name="username" title="username" placeholder="Username" required autofocus>
-                        <input id="login-password" type="password" name="password" title="password" placeholder="Password" required>
+              <h2 class="tripshare-title">TripShare</h2>
 
-                        <div class="field">
-                            <div class="control">
-                                <button type="submit" id="login-submit" class="btn btn-primary">Login</button>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                              <p class="center">New to Tripshare? <span><a class="center" href="create.html">Sign Up Now.</a></span></p>
+              <button id="newtweet">+</button>
+                 <div id ="createtweet" style="display:none"></div>
 
-                            </div>
-                        </div>
 
-                        <div class="field">
-                            <div class="control">
-                                <p id="message"></p>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+          <div class="post">
+            <div class="info">
+              <!-- <div class="profile"> </div> -->
+                <h4 class="user">Asher Zhang</h4>
+                <h2 class="journey ">From <span class="start">New York</span> to <span class="end">Raleigh</span> </h2>
+                <h2 class="date"> 11/17-11/19</h2>
+              </div>
 
-        <!-- Include links to JavaScript files below -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="script.js"></script>
-    </body>
+
+                  <div class="post-content">
+                    <div class="caption">
+                      I took a trip to NYC from Charlotte.
+                    </div>
+                      <div id="mapcontent">
+                      <div id="map"></div>
+                      </div>
+
+                  </div>
+
+          </div>
+
+
+          <!-- temporary new post -->
+          <div class="newPost">
+            <button class="button" id="IDNUMBER" onclick="axiosPostTest()">axios post test</button>
+          </div>
+
+          </div>
+
+
+  </div>
+
+  <script src = "node_modules/axios/dist/axios.min.js"></script>
+  <script src="load.js"></script>
+  <script src="manager.js"></script>
+  <script src="render.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk_u1OtCH9Oz4JLHi1nqO5aA_6DGRJ0QQ&callback=initMap"
+    async defer></script>
+  <script src="maps.js"></script>
+
+  </body>
 </html>
