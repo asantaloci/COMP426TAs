@@ -4,28 +4,31 @@ const pubRoot = new axios.create({
 });
 
 
-async function axiosPostTest() {
+async function axiosPostTest(name,pass) {
   console.log("button test but in manager");
-  // const response = await axios({
-  //   method: "post",
-  //   url: "http://localhost:3000/account/create",
-  //   withCredentials: true,
-  //   body: {
-  //   name: 'Chris',
-  //   pass: 'pass123'
-  //   },
-  //   });
-
-
-
-  return await pubRoot.post(`/account/create`, 
-  {
-    "name": "chris",
-    "pass": "pass123",
-    "data": {}
-  })
+  try {
+    await pubRoot.post(`/account/create`,{name,pass});
+    return true;
+  } catch (error)
+ {
+   return false;
+ }
 }
 
-// async function postTest() {
+async function login(name,pass){
+  try {
+    await pubRoot.post(`/account/login`,{name,pass});
+    return true;
+  } catch (error)
+ {
+   return false;
+ }
+}
 
-//   }
+async function getStatus() {
+  try {
+    return (await pubRoot.get(`account/status`)).data;
+  } catch (error) {
+    return false;
+  }
+}

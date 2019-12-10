@@ -6,6 +6,21 @@
         "role": 2,
         "description": "Lazy..."
       }
+    },
+    "test": {
+      "passwordHash": "$2a$10$e37Ur5yDXP2x7odC8KmaGesrxAS8cnpAiUA9uM1dBCVz.hBsoPgSO"
+    },
+    "ifthisworks": {
+      "passwordHash": "$2a$10$jCssTLWaqfGiaQh2pTYht.epd6u2MvtJznEZBbiIud68pCUYfupzq"
+    },
+    "testings": {
+      "passwordHash": "$2a$10$psoZjfWv4U6bQwvNtktHwuwKWQ6JDlJKXA3QqUzWBI1k.zqQxf5jC"
+    },
+    "asseater": {
+      "passwordHash": "$2a$10$oysFcEHOFC14B0OjqTjtmuB6pzzzeSNHrpcKEAhVBZK7mZghEjxOi"
+    },
+    "butt": {
+      "passwordHash": "$2a$10$AIy.5PFJwHD1jWuLOXrO3OEQ1GeFiwmlE/V/df0nzFuVcUSczXZRe"
     }
   }
 }
