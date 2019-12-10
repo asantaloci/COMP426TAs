@@ -1,9 +1,9 @@
-$(document).ready(function () {
+// $(document).ready(function () {
 
-  $('.icon').on('click', function() {
-    $(this).toggleClass('active');
-  });
+//   $('.icon').on('click', function() {
+//     $(this).toggleClass('active');
+//   });
 
-});
+// });
 
 

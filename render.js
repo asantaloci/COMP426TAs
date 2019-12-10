@@ -30,12 +30,12 @@ async function composeTweet(event) {
 
                         <div class="field">
                         <label class="label">Where from?</label>
-                            <input class="label" type="text" placeholder="Raleigh, New York, etc." name="username">
+                            <input class="label" type="text" id="REPLACEWITHID_from" placeholder="Raleigh, New York, etc." name="username">
                         </div>
 
                         <div class="field">
                         <label class="label">Where to?</label>
-                            <input class="label" type="text" placeholder="Raleigh, New York, etc." name="username">
+                            <input class="label" type="text" id="REPLACEWITHID_to" placeholder="Raleigh, New York, etc." name="username">
                         </div>
                         <input class= "button is-dark" type="submit"/>
 

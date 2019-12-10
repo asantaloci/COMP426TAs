@@ -1,6 +1,6 @@
 //mapManager-- takes care of the map API for each of the posts
 
-let target = $().attr(/* target location */, document.getElementById("IDNUMBER"/* post+ID */).value)
+let target = document.getElementById("REPLACEWITHID_to"/* post+ID */).value;
 
 //initMap makes the map itself
 function initMap() {
