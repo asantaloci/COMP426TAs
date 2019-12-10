@@ -1,25 +1,31 @@
 // import axios from 'axios';
-
 const pubRoot = new axios.create({
   baseURL: "http://localhost:3000"
 });
 
-async function createAuthor({first = 'John', last = 'Doe', numBooks = 0}) {
-  return await pubRoot.post(`/authors/`, {
-    data: {first, last, numBooks}
-  })
-}   
 
-async function getAllAuthors() {
-  return await pubRoot.get('/authors');
+async function axiosPostTest() {
+  console.log("button test but in manager");
+  // const response = await axios({
+  //   method: "post",
+  //   url: "http://localhost:3000/account/create",
+  //   withCredentials: true,
+  //   body: {
+  //   name: 'Chris',
+  //   pass: 'pass123'
+  //   },
+  //   });
+
+
+
+  return await pubRoot.post(`/account/create`, 
+  {
+    "name": "chris",
+    "pass": "pass123",
+    "data": {}
+  })
 }
 
-(async () => {
-  await createAuthor({
-    first: "chris",
-    numBooks: 4
-  });
+// async function postTest() {
 
-  let {data} = await getAllAuthors();
-  console.log(data)
-})();
+//   }

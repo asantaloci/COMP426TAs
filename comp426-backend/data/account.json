@@ -1,2 +1,11 @@
 {
+  "users": {
+    "chris": {
+      "passwordHash": "$2a$10$ldhbYe.33KA0IeC2bhwfO.reYpb6PLMxKJefLL56Lax0WeZEwcwv6",
+      "data": {
+        "role": 2,
+        "description": "Lazy..."
+      }
+    }
+  }
 }

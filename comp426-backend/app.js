@@ -14,6 +14,11 @@ const debugAutoWireWarning = debug('auto-wire-warning');
 
 const app = express();
 
+//self added
+// var cors = require('cors');
+// app.use(cors());
+//end of self added
+
 app.use(require('morgan')('dev'));
 require('./data/DataStore');
 
