@@ -240,7 +240,7 @@
       }
     ]
   }
-]
+      ]
      });
 
            var contentString = '<div id="content">'+
@@ -253,7 +253,6 @@
                '</div>'+
                '</div>';
 
-
            var infowindow = new google.maps.InfoWindow({
              content: contentString
            });
@@ -262,14 +261,9 @@
 
 
 
-     var marker = new google.maps.Marker({position: catsCradle,map:map})
-
-
+     var marker = new google.maps.Marker({position: catsCradle,map:map}) 
              marker.addListener('click', function() {
                infowindow.open(map, marker);
-
              });
-
-
 
    }
