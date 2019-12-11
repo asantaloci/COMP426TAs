@@ -7,9 +7,14 @@ html, body {
 
 
 }
+
+
+
+
 /*  */
 #hidden-newPost {
-  /* background-color: rgba(41, 41, 43,0.5); */
+  background-color: #696fc2;
+  padding:2em;
   /* margin: 2em; */
   /* padding:1em;/ */
 }
@@ -19,6 +24,7 @@ html, body {
   align-items: center;
 } */
 #trip-name {
+  color:white;
   font-size: 2em;
   margin: 2em 0em 0em 0em;
 }
@@ -78,6 +84,10 @@ html, body {
 #pac-input:focus, #pac-input2:focus {
   border-color: #4d90fe;
 }
+.center {
+
+  text-align: center;
+}
 
 #hide,#post {
   margin-top:2em;
@@ -88,12 +98,15 @@ html, body {
 
     color: #4422ab;
     border-radius: 4rem;
-    display: block;
-    width: 100%;
+
     background: white;
     border: 2px solid #4422ab;
-    padding: 0.9rem 0 1.1rem;
+    padding: 0.9rem 0 1rem;
     transition: color 1s, border-color 1s;
+    width: 10em;
+
+  display: inline-block;
+
 
 }
 
@@ -120,6 +133,10 @@ background-size: cover;
 background-repeat: no-repeat;
 margin:2em;
 }
+/* .solid {
+  background-color: #fbedff;
+  height: 100vh;
+} */
 .tripshare-title {
   color: #e6e7ff;
 text-align: center;
@@ -133,9 +150,21 @@ margin-bottom: 2em;
 
 }
 .user {
-font-size: 1.2em;
-font-weight: 400;
+font-size: 1em;
+font-weight: 100;
+font-style: italic;
+text-align: left;
 /* margin:1em; */
+}
+.name {
+  font-weight: bold;
+  color: #eb73c1;
+}
+
+#markers {
+  margin-left: .4em;
+  text-align: center;
+  /* padding: 0em 2em 0em 2em; */
 }
 
 .journey {
@@ -145,12 +174,15 @@ font-weight: 400;
 }
 .start,.end {
   /* color: tomato; */
-color: white;
+color: #4422ab;
 }
 
 .info {
-  padding:.5em .5em .5em 1em;
+float: right;
   display: inline-flex;
+  text-align:right;
+
+
 }
 .add-post {
 
@@ -162,7 +194,8 @@ color: white;
 }
 
 .post {
-  background-color:rgba(245,245,245,0.6);
+  /* background-color:rgba(245,245,245,0.6); */
+  background-color: #fbedff;
   margin: .2em;
   border-radius: .5em;
 }
@@ -173,6 +206,7 @@ color: white;
 
 
 }
+
 #mapcontent {
   width:100%;
   display:flex;
@@ -202,7 +236,7 @@ color: white;
     display:flex;
     width: 100%;
     font-size: .8em;
-    color:white;
+    color: #4422ab;
     margin-left: 1em;
   }
 
@@ -533,13 +567,23 @@ padding: 1em; */
 .maps {
   display: flex;
 }
+
+.markerz{
+width:3em;
+
+font-size: 1.5em;
+}
 @media only screen and (min-width: 740px){
+  .markerz{
+  width:5em;
+  }
   body {
     background-image: url('https://media.giphy.com/media/W1a7C9o6ovHeb32jGy/giphy.gif');
 background-size: cover;
   }
   .post {
     margin: 2em;
+    padding: 2em;
     border-radius: .5em;
   }
   #menuToggle {
@@ -567,8 +611,9 @@ background-size: cover;
   .caption {
     width: 40%;
     font-size: .9em;
-    color:white;
+    color: #4422ab;
     margin-left: .5em;
+    margin-top:2em;
   }
 
 }
