@@ -36,6 +36,12 @@
     },
     "fuck": {
       "passwordHash": "$2a$10$SJhORRsuLqm2j9nvFABW7uxzXtYacI5DlKGfn.ByQiNPQvFV0nuqi"
+    },
+    "testman": {
+      "passwordHash": "$2a$10$KuXpfPyohm4yzoJrl9nS9uyfTnxLdiGG74hjKVocGvwy0EQhmUP4W"
+    },
+    "ddd": {
+      "passwordHash": "$2a$10$6ZOra2Yz4ogF56CTFT1PM.gN9BYYSX.RxyOgvhWp6KMcamKbvYnum"
     }
   }
 }

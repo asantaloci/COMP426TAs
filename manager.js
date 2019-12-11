@@ -21,19 +21,24 @@ const submitLogin = function(event){
 const createNewAccount = function (event) {
   event.preventDefault();
 
+  let name = document.getElementById('signup-name').value;
   let username = document.getElementById('signup-username').value;
   let password = document.getElementById('signup-password').value;
 
   console.log(username +", "+ password);
 
-  addUser(username,password);
+  addUser(username,name,password);
   return false;
 }
 
-async function addUser(name,pass) {
+async function addUser(user,name,pass) {
   console.log("button test but in manager");
   try {
+
     let response = await pubRoot.post(`/account/create`,{name,pass});
+    // add name functionality
+
+
     console.log("MADE A NEW ACCNT");
     document.location.href = '/feed/feed.html';
     return true;
@@ -95,5 +100,18 @@ async function getStatus() {
 
 //POSTING STUFF
 async function post() {
-  
+  const pubRoot = new axios.create({
+    baseURL: "http://localhost:3000/public"
+  });
+
+  //needs a name, description, to and from, how long, username
+  async function createAuthor({first = 'John', last = 'Doe', numBooks = 0}) {
+    return await pubRoot.post(`/feed/`, {
+      data: {
+
+      }
+    })
+  }
+
+
 }
