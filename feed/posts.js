@@ -1,11 +1,12 @@
 console.log("posts");
 window.onload = function () {
-$(document).on("click","#post", closepost);
+
 $(document).on("click","#post", handlePost);
+console.log("posts.js is running");
+
 }
 
 function closepost() {
-  console.log("hi");
 
 
           document.getElementById('hidden-newPost').style.display = "none";

@@ -102,7 +102,7 @@
 
                                   </div>
 
-                                  <button class="button" onclick="closepost()"id="post">post</button>
+                                  <button class="button" id="post">post</button>
 
                                   </div>
 
@@ -184,7 +184,7 @@
 <script>
 
 function closepost() {
-  console.log("hi");
+  console.log("internal closepost running");
 
 
           document.getElementById('hidden-newPost').style.display = "none";
@@ -192,10 +192,11 @@ showit = 0;
   }
 </script>
 
+<script src="posts.js"></script>
+
   <script src = "../node_modules/axios/dist/axios.min.js"></script>
 
 <script src="render.js"></script>
-
 
   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_HW5O_cTpcXoo3q3p5Ko9-na0Pp1Fpoo&libraries=places"></script> -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

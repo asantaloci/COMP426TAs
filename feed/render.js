@@ -1,5 +1,5 @@
 let showit = 0;
-console.log("wow");
+console.log("render.js is running");
 window.onload = function () {
     // document.getElementById('hidden-newPost').style.display = "none";
     // document.getElementById('pac-container').style.display = "none";
@@ -17,7 +17,7 @@ $(document).on("click","#hide", show);
 
 function show() {
   console.log(showit)
-console.log("wow");
+console.log("show() is running");
 
       if (showit == 1) {
           document.getElementById('hidden-newPost').style.display = "none";

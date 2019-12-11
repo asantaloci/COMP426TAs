@@ -102,6 +102,7 @@ async function getStatus() {
 async function post() {
   const pubRoot = new axios.create({
     baseURL: "http://localhost:3000/public"
+    
   });
 
   //needs a name, description, to and from, how long, username
