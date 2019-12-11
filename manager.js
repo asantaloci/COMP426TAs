@@ -1,14 +1,8 @@
-// window.onload = function () {
-//   console.log("page logged");
-  
-//   $(document).on("click", "#login-submit", submitLogin);
-// }
-
-
 const pubRoot = new axios.create({
   baseURL: "http://localhost:3000"
 });
 
+//LOGIN STUFF
 const submitLogin = function(event){
   event.preventDefault();
   
@@ -64,6 +58,8 @@ async function login(name,pass){
     return true;
   } catch (error)
  {
+   alert("User/Pass is incorrect!");
+   
    console.log("NO SUCH USER");
    
    return false;
@@ -95,3 +91,9 @@ async function getStatus() {
 
 }
 
+/********************************************************************************* */
+
+//POSTING STUFF
+async function post() {
+  
+}
