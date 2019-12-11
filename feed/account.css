@@ -1,0 +1,20 @@
+html,body {
+  background-color:#696fc2;
+}
+
+.account {
+  margin:2em;
+  font-size: 3em;
+  color:white;
+}
+
+.delete {
+margin:6em;
+}
+.delete:hover {
+color: white;
+background-color: #4422ab;
+}
+img {
+  margin: 1.5em 1.5em 1.5em 1.5em;
+}
