@@ -17,24 +17,37 @@ const submitLogin = function(event){
   console.log(username+', '+password);
   if (!login(username, password)) {
     console.log("nah son");
-    
+    return false;
   } else {
     console.log("nice");
-    document.location.href = '/feed/feed.html';
-    
+    return true; 
   }
+}
 
+const createNewAccount = function (event) {
+  event.preventDefault();
+
+  let username = document.getElementById('signup-username').value;
+  let password = document.getElementById('signup-password').value;
+
+  console.log(username +", "+ password);
+
+  addUser(username,password);
   return false;
 }
 
-
-async function axiosPostTest(name,pass) {
+async function addUser(name,pass) {
   console.log("button test but in manager");
   try {
-    await pubRoot.post(`/account/create`,{name,pass});
+    let response = await pubRoot.post(`/account/create`,{name,pass});
+    console.log("MADE A NEW ACCNT");
+    document.location.href = '/feed/feed.html';
     return true;
   } catch (error)
  {
+   console.log("NOOOOOOOO");
+   alert("This account already exists!");
+
    return false;
  }
 }
@@ -47,7 +60,7 @@ async function login(name,pass){
     console.log("JWT is: "+ jwt);
     
     localStorage.setItem('jwt', jwt);
-
+    document.location.href = '/feed/feed.html';
     return true;
   } catch (error)
  {
@@ -81,5 +94,4 @@ async function getStatus() {
   }
 
 }
-
 

@@ -21,6 +21,21 @@
     },
     "butt": {
       "passwordHash": "$2a$10$AIy.5PFJwHD1jWuLOXrO3OEQ1GeFiwmlE/V/df0nzFuVcUSczXZRe"
+    },
+    "please": {
+      "passwordHash": "$2a$10$vXlRFLyy50HOzMvWxrHvvOOK8pvV0t1vRD01/.u8DLjicK0OknH8."
+    },
+    "create": {
+      "passwordHash": "$2a$10$Hsv5OBC8Ar8HTDrR1g8G8uIb.QiG9NF28dbLO/tu7eCeCC.DNn3.y"
+    },
+    "newaccount": {
+      "passwordHash": "$2a$10$3X9WstGn9My4dx2EgVhyp.yuq3m2RfavpYojkGGWE.2KxTs8Eo4qi"
+    },
+    "tripshare": {
+      "passwordHash": "$2a$10$p4JWwnMn5kuZR7ekPU27q.Ln4Rd6z/O/fqSzVdHbyH5rhPFk0IYJu"
+    },
+    "fuck": {
+      "passwordHash": "$2a$10$SJhORRsuLqm2j9nvFABW7uxzXtYacI5DlKGfn.ByQiNPQvFV0nuqi"
     }
   }
 }

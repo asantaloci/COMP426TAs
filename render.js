@@ -3,6 +3,7 @@ window.onload = function () {
 
   $(document).on("click", "#newtweet", composeTweet);
   $(document).on("click", "#login-submit", submitLogin);
+  $(document).on("click", "#create-submit", createNewAccount);
 }
 
 async function composeTweet(event) {
@@ -19,9 +20,7 @@ async function composeTweet(event) {
 
   } else {
     event.preventDefault()
-
-
-// tweets = "";
+    console.log();
 
 
   tweets = `<div id ="createtweet">
