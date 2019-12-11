@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-
+<link rel="icon" href=""/>
   </head>
   <body>
     <div class="container">
@@ -37,8 +37,13 @@
 
               <h2 class="tripshare-title">TripShare</h2>
 
+
                           <!-- where from -->
+                          <div class="center">
+
                           <button class="button" onclick="show()" id="hide">new post</button>
+
+                        </div>
                                       <div id="hidden-newPost" style="display:none;">
   <textarea class="col-md-4" id="trip-name" type="text" title="trip-name" placeholder="Trip Name"></textarea>
   <div id="post-description">
@@ -103,28 +108,44 @@
 
 
 
-
+<div class="solid">
               <!-- <button id="newtweet">+</button>
                  <div id ="createtweet" style="display:none"></div> -->
 
 
           <div class="post">
             <div class="info">
-              <!-- <div class="profile"> </div> -->
-                <h4 class="user">Asher Zhang</h4>
                 <h2 class="journey ">From <span class="start">New York</span> to <span class="end">Raleigh</span> </h2>
                 <h2 class="date"> 11/17-11/19</h2>
               </div>
+            <h4 class="name">Asher Zhang</h4><h2 class="user">@asherzhang</h2>
 
 
-                  <div class="post-content">
-                    <div class="caption">
+
+                  <div class="post-content row">
+                    <div class="caption col-md-5">
                       I took a trip to NYC from Charlotte.
-                    </div>
-                      <div id="mapcontent">
-                      <!-- <div id="map"></div> -->
-                      </div>
+                      I took a trip to NYC from Charlotte.
+                      I took a trip to NYC from Charlotte.
+                      I took a trip to NYC from Charlotte.I took a trip to NYC from Charlotte.
 
+                    </div>
+                      <div class="col-md-7 row" id="markers">
+                        <div class="marker-from col-md-5"style="width:50%">
+
+                      <img class="markerz"src="../marker.png"/>
+                      <h3 class="start">NEW YORK</h3>
+                    </div>
+
+                    <!-- <div class="back col-md-1" style="width:10%">
+
+                    >
+</div> -->
+                      <div class="marker-to col-md-5" style="width:50%">
+                      <img class="markerz"src="../marker.png" />
+                      <h3 class="end ">RALEIGH</h3>
+                      </div>
+                      </div>
                   </div>
 
           </div>
@@ -140,9 +161,9 @@
           <!-- temporary new post -->
           <!-- <div class="newPost">
             <button class="button" id="IDNUMBER" onclick="axiosPostTest('buttt','test1123')">axios post test</button>
-            <button class="button" id="IDNUMBER1" onclick="getStatus()">axios status test</button> -->
-            <button class="button" id="IDNUMBER2" onclick="logout()">logout</button>
-          </div>
+            <button class="button" id="IDNUMBER1" onclick="getStatus()">axios status test</button>
+            <button class="button" id="IDNUMBER2" onclick="login('buttt','test1123')">axios login test</button>
+          </div> -->
 
 
 
@@ -154,6 +175,7 @@
 
   </div>
 
+  </div>
 
 
   <!-- Replace the value of the key parameter with your own API key. -->
@@ -168,7 +190,6 @@
 
 
   <script src="render.js"></script>
-  <script src="../manager.js"></script>
   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_HW5O_cTpcXoo3q3p5Ko9-na0Pp1Fpoo&libraries=places"></script> -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
