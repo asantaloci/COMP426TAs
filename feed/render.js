@@ -1,16 +1,24 @@
 let showit = 0;
-console.log("testing 1");
+console.log("wow");
 window.onload = function () {
-  console.log("I AM IN THE WINDOW FUNCTION");
-    $(document).on("click","#hide", show);
+    // document.getElementById('hidden-newPost').style.display = "none";
+    // document.getElementById('pac-container').style.display = "none";
+    // document.getElementById('pac-container2').style.display = "none";
+    // document.getElementById('infowindow-content').style.display = "none";
+$(document).on("click","#hide", show);
+
+
+
+//the fun stuff
+
+
+  // $(document).on("click", "#newtweet", composeTweet);console.log('wow');
 }
 
-
-console.log(showit);
 function show() {
   console.log(showit)
-  console.log("wow");
-  
+console.log("wow");
+
       if (showit == 1) {
           document.getElementById('hidden-newPost').style.display = "none";
           showit = 0;

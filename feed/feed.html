@@ -13,6 +13,26 @@
   </head>
   <body>
     <div class="container">
+      <!-- <nav role="navigation">
+                <div id="menuToggle">
+                   <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                  <ul id="menu">
+                    <a href="#"><li>Feed</li></a>
+                    <a href="#"><li>Settings</li></a>
+                    <a href="#"><li>About</li></a>
+                  </ul>
+                </div>
+      </nav> -->
+      <!-- <div class="page js-page">
+        <a href="#" class="nav-icon js-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div> -->
           <div class="content">
 
               <h2 class="tripshare-title">TripShare</h2>
@@ -28,7 +48,7 @@
   <textarea class="col-md-4" id="trip-name" type="text" title="trip-name" placeholder="Trip Name"></textarea>
   <div id="post-description">
     <h4 class="col-md-4">About the trip:</h4>
-    <textarea class="col-md-8" id="time" type="text" title="time" placeholder="What'd you see, why did you go?"></textarea>
+    <textarea class="col-md-8" id="caption" type="text" title="time" placeholder="What'd you see, why did you go?"></textarea>
 
   </div>
 
@@ -82,7 +102,7 @@
 
                                   </div>
 
-                                  <button class="button" onclick="post()" id="post">post</button>
+                                  <button class="button" onclick="closepost()"id="post">post</button>
 
                                   </div>
 
@@ -161,15 +181,22 @@
   <!-- Replace the value of the key parameter with your own API key. -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_HW5O_cTpcXoo3q3p5Ko9-na0Pp1Fpoo&libraries=places&callback=initMap"
           async defer></script>
+<script>
+
+function closepost() {
+  console.log("hi");
 
 
-
+          document.getElementById('hidden-newPost').style.display = "none";
+showit = 0;
+  }
+</script>
 
   <script src = "../node_modules/axios/dist/axios.min.js"></script>
 
+<script src="render.js"></script>
 
 
-  <script src="render.js"></script>
   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_HW5O_cTpcXoo3q3p5Ko9-na0Pp1Fpoo&libraries=places"></script> -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
