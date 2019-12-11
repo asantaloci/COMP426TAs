@@ -1,9 +1,13 @@
 
 let place2;
-window.onload = function () {
-initMap2();
 
-}
+// window.onload = function () {
+// console.log("initMap2 onload");
+
+// initMap2();
+
+// }
+
 function initMap2() {
 
     var map2 = new google.maps.Map(document.getElementById('map2'), {

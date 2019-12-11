@@ -1,9 +1,8 @@
-console.log("posts");
-window.onload = function () {
-
-$(document).on("click","#post", handlePost);
 console.log("posts.js is running");
 
+window.onload = function () {
+  $(document).on("click","#post", handlePost);
+  console.log("posts.js internal onload is running");
 }
 
 function closepost() {
@@ -12,8 +11,6 @@ function closepost() {
           document.getElementById('hidden-newPost').style.display = "none";
 
   }
-}
-
 
 async function posts() {
   const pubRoot = new axios.create({
@@ -57,7 +54,7 @@ function renderpost(data) {
   `
 }
 
-async function handlePost(e) {
+const handlePost =  function(e) {
   let title = $('#trip-name').val();
   let caption = $('#caption').val();
   let where = $('#where').val();

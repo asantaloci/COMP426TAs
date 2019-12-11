@@ -2,10 +2,13 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 let place;
-window.onload = function () {
-initMap();
 
-}
+// window.onload = function () {
+//   console.log("initMap1 is running");
+  
+// initMap();
+// }
+
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 35.9132, lng: -79.0558},

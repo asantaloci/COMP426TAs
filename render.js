@@ -1,6 +1,7 @@
 let on = 0;
 window.onload = function () {
-
+  console.log("render.js (outside) is running");
+  
   $(document).on("click", "#newtweet", composeTweet);
   $(document).on("click", "#login-submit", submitLogin);
   $(document).on("click", "#create-submit", createNewAccount);
