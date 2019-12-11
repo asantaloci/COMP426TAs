@@ -2,6 +2,7 @@ let on = 0;
 window.onload = function () {
 
   $(document).on("click", "#newtweet", composeTweet);
+  $(document).on("click", "#login-submit", submitLogin);
 }
 
 async function composeTweet(event) {

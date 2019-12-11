@@ -7,8 +7,9 @@
         <title>Login to COMP 426</title>
 
         <!-- Include links to CSS stylesheets below -->
+        <link rel="shortcut icon" href="#" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" />
     </head>
 
@@ -26,7 +27,7 @@
 
                         <div class="field">
                             <div class="control">
-                                <button type="submit" id="login-submit" class="btn btn-primary">Login</button>
+                                <button type="submit" id="login-submit" class="btn btn-primary" >Login</button>
                             </div>
                         </div>
                         <div class="field">
@@ -46,19 +47,31 @@
             </div>
 
         </div>
-        <div class="newPost">
-          <button class="button" id="IDNUMBER" onclick="axiosPostTest('butt','test123')">axios post test</button>
-          <button class="button" id="IDNUMBER1" onclick="getStatus()">axios status test</button>
-          <button class="button" id="IDNUMBER2" onclick="login('butt','test123')">axios login test</button>
-        </div>
 
         <script src = "node_modules/axios/dist/axios.min.js"></script>
         <script src="load.js"></script>
         <script src="manager.js"></script>
+
+      <!-- this checks and sees if we are signed in already or not   -->
+      <script type="text/javascript">
+      console.log("START");
+      
+        if (localStorage.getItem('jwt') != null) {
+          
+          getStatus();
+          console.log("user active");
+
+          document.location.href = '/feed/feed.html';
+        } else{
+          console.log("FINISHED LOADING");
+          
+        }
+      </script> 
+
         <script src="render.js"></script>
-        <script src="functions.js"></script>
+        <!-- <script src="functions.js"></script> -->
         <!-- Include links to JavaScript files below -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
     </body>
 </html>

@@ -1,9 +1,2 @@
-// $(document).ready(function () {
-
-//   $('.icon').on('click', function() {
-//     $(this).toggleClass('active');
-//   });
-
-// });
-
-
+//load will check if you are logged in already using the jwt token
+// Entry point
