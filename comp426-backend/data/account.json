@@ -63,6 +63,18 @@
       "data": {
         "realName": "shit"
       }
+    },
+    "ok": {
+      "passwordHash": "$2a$10$GU21wre4W1iixEqBvBOSgO2vTaBmGL40aSrbLat0hoInoX3eqKv9C",
+      "data": {
+        "realName": "shiteeater"
+      }
+    },
+    "ange": {
+      "passwordHash": "$2a$10$guNrWHQ2zpIWjhHb2zbCqOW4O9DpGB4ch7igJGJNEHfOetbQ.G0EG",
+      "data": {
+        "realName": "Angel is this working"
+      }
     }
   }
 }

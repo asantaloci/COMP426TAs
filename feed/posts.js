@@ -48,7 +48,7 @@ function renderpost(data) {
 
             <div class="caption col-md-5"><p>
 <span class="title">`+data.title+`</span><br />
-              +data.caption+
+              `+data.caption+`
 </p>
             </div>
               <div class="col-md-7 row" id="markers">
