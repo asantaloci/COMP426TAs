@@ -81,6 +81,24 @@
       "data": {
         "realName": "newPush"
       }
+    },
+    "travis": {
+      "passwordHash": "$2a$10$c2TA.XNh6BrobVkRUfFNZOaFGu2ej/InLpW.OSCfhnQgSloZyttAO",
+      "data": {
+        "realName": "Travis Cheung"
+      }
+    },
+    "angel": {
+      "passwordHash": "$2a$10$CsD/v6hGZYOCAsnrmTnuTe.8Dcx68AsnZ1fkLOaI3Q288noYU0Nky",
+      "data": {
+        "realName": "Angel Santaloci"
+      }
+    },
+    "izzy": {
+      "passwordHash": "$2a$10$zM8e.mVGkZSz9OQr2DpBeudFDOln.KOtyj3Rod4adOpu5k1n55r.2",
+      "data": {
+        "realName": "izzy"
+      }
     }
   }
 }
