@@ -31,14 +31,14 @@ const createNewAccount = function (event) {
   return false;
 }
 
-async function addUser(user,name,pass) {
+async function addUser(name,irlName,pass) {
   console.log("button test but in manager");
   try {
 
     let response = await pubRoot.post(`/account/create`,{name,pass});
     // add name functionality
-    let res2 = await pubRoot.post('/account/create', {
-      data:{name},
+    let res2 = await pubRoot.post('/account/users/fuckfuckshit', {
+      data:{irlName},
       type: 'merge'
     })
 

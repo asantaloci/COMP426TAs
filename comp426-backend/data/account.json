@@ -42,6 +42,15 @@
     },
     "ddd": {
       "passwordHash": "$2a$10$6ZOra2Yz4ogF56CTFT1PM.gN9BYYSX.RxyOgvhWp6KMcamKbvYnum"
+    },
+    "ahh1234321": {
+      "passwordHash": "$2a$10$gGr3yOK1hb8VkQatU0JI5ucQFOeLzhmJojflss.hpBKgEGn0B8Bxq"
+    },
+    "ahh12343212": {
+      "passwordHash": "$2a$10$lU4558g1APXSCaPU2849uOB3HHjRftSItWCtCuShUHDtPZDY4RRzW"
+    },
+    "fuckfuckshit": {
+      "passwordHash": "$2a$10$1yBfugrz8rxsfdEN6tkhk.quane9jX8azDs2APrPr08tDIxC105QG"
     }
   }
 }
