@@ -10,6 +10,7 @@ async function posts() {
 
   const result  = await pubRoot.get('/public');
 
+  //needs to load each one
 
 
 }
