@@ -6,7 +6,9 @@ async function posts() {
     baseURL: "http://localhost:3000/public"
   });
 
-  const result  = await pubRoot.get('/listings');
+  const result  = await pubRoot.get('/trips');
+  console.log(result.data);
+  
 
   for (let i = result.data.result.length-1; i>result.data.result.length-30;i--) {
     renderpost(result.data.result[i]);
@@ -17,7 +19,6 @@ async function posts() {
 }
 
 function renderpost(data) {
-
   let head = `
   <div class="post">
     <div class="info">
@@ -41,6 +42,7 @@ function renderpost(data) {
 
   </div>
   `
+  
 }
 
 const handlePost =  async function(e) {
@@ -52,18 +54,6 @@ const handlePost =  async function(e) {
   let to = $('#to').val();
   let time = $('#time').val();
   let token = localStorage.getItem('jwt');
-
-
-  console.log(title);
-  console.log(caption);
-  console.log(where);
-  console.log(to);
-  console.log(time);
-  console.log(token);
-  
-  
-  
-  
 
   const pubRoot = new axios.create({
     baseURL: "http://localhost:3000/public"

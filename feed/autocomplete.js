@@ -9,9 +9,10 @@ let place;
 let place2;
 window.onload = function () {
   $(document).on("click","#post", handlePost);
-$(document).on("click","#post", closepost);
-initMap();
-initMap2();
+  $(document).on("click","#post", closepost);
+  initMap();
+  initMap2();
+  posts();
 }
 
 function closepost() {

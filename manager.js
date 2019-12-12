@@ -101,24 +101,3 @@ async function getStatus() {
 }
 
 /********************************************************************************* */
-
-//POSTING STUFF
-async function post() {
-  console.log(new post);
-  
-  const pubRoot = new axios.create({
-    baseURL: "http://localhost:3000/public"
-    
-  });
-
-  //needs a name, description, to and from, how long, username
-  async function createAuthor({first = 'John', last = 'Doe', numBooks = 0}) {
-    return await pubRoot.post(`/feed/`, {
-      data: {
-
-      }
-    })
-  }
-
-
-}
