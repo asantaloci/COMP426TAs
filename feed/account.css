@@ -26,6 +26,8 @@ img {
     color: #e6e7ff;
 }
 .logout {
+  font-size: 2em;
+  margin: 1em 1em 0em 0em;
   float: right;
   background-color: transparent;
   color: #e6e7ff;
@@ -35,15 +37,23 @@ img {
   float: right;
   background-color: transparent;
   color:pink;
+
 }
 .clear {
   float: right;
   background-color: transparent;
   color: #e6e7ff;
+  margin: 0em 5em 0em 0em;
 }
 
-.clear:hover {
+.clear :hover {
   float: right;
   background-color: transparent;
   color:pink;
+}
+.liked-title {
+  color:#eb73c1
+}
+.liked-user {
+  color: #e6e7ff;
 }

@@ -4,13 +4,7 @@ document.getElementById('post').onclick = function() {
    handlePost();
 
 }
-// $( document ).ready(function() {
-//
-//
-//   handlePost();
-//   posts();
-//
-// });
+
 async function posts() {
   console.log("posts running");
 
@@ -21,14 +15,14 @@ async function posts() {
   const result  = await pubRoot.get('/trips');
   console.log(result.data.result.length);
   console.log(result.data.result.length);
-  for (let i = result.data.result.length-1; i>0;i--) {
+  for (let i = result.data.result.length-1; i>=result.data.result.length-25;i--) {
     // renderpost(result.data.result[0]);
-    console.log(renderpost(result.data.result[i]));
+    console.log(renderpost(result.data.result[i], i));
 // console.log(renderpost(result.data.result[14]));
 }
 }
 
-function renderpost(data) {
+function renderpost(data, index) {
   console.log("entered renderpost");
   //each data object (passed in) has parameters which can be accessed with [] or .
   // console.log(data.where);
@@ -65,7 +59,7 @@ function renderpost(data) {
 
               </div>
               </div>
-              <a href=""><img class="heart" src="heart.png" style="width:2em;float:right"/></a>
+              <a onclick="likeButton(`+ index +`)""><img class="heart" src="heart.png" style="width:2em;float:right"/></a>
           </div>
   </div>
   `
@@ -93,9 +87,6 @@ function renderpost(data) {
 
     data = {title, caption, where, to, time, token,user,name};
 
-    //move this so that its only called when code is run
-    userLiked(data);
-
     const pubRoot = new axios.create({
       baseURL: "http://localhost:3000/public"
     });
@@ -114,6 +105,50 @@ function renderpost(data) {
   }
 }
 
+async function likeButton (idx) {
+  console.log("current idx: " + idx);
+  
+  const pubRoot = new axios.create({
+    baseURL: "http://localhost:3000/public"
+  });
+
+  const result  = await pubRoot.get('/trips');
+  let data = result.data.result[idx];
+  let title = data.title;
+  let caption = data.caption;
+  let where = data.where;
+  let to = data.to;
+  let time = data.time;
+  let token = data.token;
+  let user = data.user;
+  let name = data.name;
+
+  console.log("we wanna like the post titled: "+title);
+  
+  let info = {title, caption, where, to, time, token,user,name};
+  userLiked(info);
+  allLiked(info);
+  return false
+}
+
+async function allLiked(data) {
+  //collect user info
+  let token = localStorage.getItem('jwt');
+  let name = localStorage.getItem('name');
+
+  return await axios({
+    method:'POST',
+    url: "http://localhost:3000/private/liked",
+    headers: {
+      //jwt is the jwt from logging in
+            "Authorization": "Bearer " + token
+    },
+    data: { data,
+      type: 'merge' } 
+  });
+
+}
+
 //make it so that this generates the like history
 async function userLiked (data) {
   //collect user info
@@ -128,7 +163,7 @@ async function userLiked (data) {
             "Authorization": "Bearer " + token
     },
     data: { data,
-      type: 'merge' }
+      type: 'merge' } 
   });
 
 }

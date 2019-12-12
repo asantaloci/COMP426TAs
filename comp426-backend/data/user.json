@@ -70,5 +70,19 @@
         "name": "Angel is this working"
       }
     ]
+  },
+  "push": {
+    "newPush": [
+      {
+        "title": "Angel TEst",
+        "caption": "TESTING",
+        "where": "New Orleans, LA, USA",
+        "to": "New York, NY, USA",
+        "time": "5 days",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW5nZSIsImRhdGEiOnsicmVhbE5hbWUiOiJBbmdlbCBpcyB0aGlzIHdvcmtpbmcifSwiaWF0IjoxNTc2MTY3MjM0LCJleHAiOjE1Nzg3NTkyMzR9._bhOBce0Kh-XQQVaniJkSl1aYZQ77Z7W6-nbI9NjEPE",
+        "user": "ange",
+        "name": "Angel is this working"
+      }
+    ]
   }
 }

@@ -75,6 +75,12 @@
       "data": {
         "realName": "Angel is this working"
       }
+    },
+    "push": {
+      "passwordHash": "$2a$10$cxgEqIvIlxWvFnbUJ3hQUe./9uEdQGKVWwIc3GdjAaSczCZmWJJKy",
+      "data": {
+        "realName": "newPush"
+      }
     }
   }
 }

@@ -10,13 +10,14 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link href="account.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 
   </head>
   <body>
 <button type="logout" id="logout" class="btn logout" onclick="logout()">Logout</button>
 <a href="feed.html" class="back"id="back"><img src="back-arrow.png" style="width:2em"/></a>
-<h2 class="account">
-  Hello @<span class="private-user">randomuser</span>
+<h2 class="account" id="accout-greeting">
+  Hello @<span id="private-user" class="private-user"></span>
 </h2>
 
 <!-- <button type="delete" id="delete-account" class="btn delete">Delete Account</button> -->
@@ -27,17 +28,17 @@
 
 <!-- below is the html for the list. idk if this is supposed to be on the js so if so just copy paste this stuff -->
 <div class="liked">
- <h2 class="liked-section">Posts you've Liked:</h2>
-<!--<h4 class="liked-title">Title of post</h4>
-<h6 class="liked-user">@whoisit</h6> -->
+ <h2 id="root" class="liked-section">Posts you've Liked:</h2>
+
 </div>
 
 
 
 
   <script src = "../node_modules/axios/dist/axios.min.js"></script>
-
+  <script src="account.js"></script>
   <script src="../manager.js"></script>
+  <script src="posts.js"></script>
   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_HW5O_cTpcXoo3q3p5Ko9-na0Pp1Fpoo&libraries=places"></script> -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
