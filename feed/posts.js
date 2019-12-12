@@ -54,6 +54,7 @@ const handlePost =  async function(e) {
   let to = $('#to').val();
   let time = $('#time').val();
   let token = localStorage.getItem('jwt');
+  let user = localStorage.getItem('user');
 
   const pubRoot = new axios.create({
     baseURL: "http://localhost:3000/public"
@@ -63,7 +64,7 @@ const handlePost =  async function(e) {
     headers: {
       Authorization: "Bearer " + token
     },
-    data: {title, caption, where, to, time, token},
+    data: {title, caption, where, to, time, token, user},
     type: "merge"
   })} else {
     alert("YOU GOTTA SIGN IN CHUMP");

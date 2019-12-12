@@ -67,6 +67,7 @@ async function login(name,pass){
     console.log("JWT is: "+ jwt);
     
     localStorage.setItem('jwt', jwt);
+    localStorage.setItem('user', name);
     document.location.href = '/feed/feed.html';
     return true;
   } catch (error)
