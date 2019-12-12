@@ -1,23 +1,17 @@
 console.log("posts.js is running");
-$( document ).ready(function() {
 
-
-  // hapost();
-  posts();
-
-});
 
 async function posts() {
   console.log("posts running");
   
   const pubRoot = new axios.create({
-    baseURL: "http://localhost:3000/public"
+    baseURL: "http://localhost:3000"
   });
 
-  const result  = await pubRoot.get('/trips');
-  console.log(result.data.result.length);
-  for (let i = result.data.result.length; i>result.data.result.length-30;i--) {
-    //ok
+  const result  = await pubRoot.get('/public');
+
+
+
 }
 
 function renderpost(data) {
@@ -68,41 +62,41 @@ function renderpost(data) {
 }
 
 //make a new post
-async function handlePost(e) {
+const handlePost = async function(e) {
   //only able to post if LOGGED IN
   if (localStorage.getItem('jwt') != null)
-  {
-    let title = $('#trip-name').val();
-    let caption = $('#caption').val();
-    let where = $('#pac-input').val();
-    let to = $('#pac-input2').val();
-    let wheremark = $('#pac-input').val();
-    let tomark = $('#pac-input2').val();
-    let time = $('#time').val();
-    let token = localStorage.getItem('jwt');
-    let user = localStorage.getItem('user');
-    let name = localStorage.getItem('name');
+  {let title = $('#trip-name').val();
+  let caption = $('#caption').val();
+  let where = $('#pac-input').val();
+  let to = $('#pac-input2').val();
+  let wheremark = $('#pac-input').val();
+  let tomark = $('#pac-input2').val();
+  let time = $('#time').val();
+  let token = localStorage.getItem('jwt');
+  let user = localStorage.getItem('user');
+  let name = localStorage.getItem('name');
 
-    data = {title, caption, where, to, time, token,user,name};
-    
-    //move this so that its only called when code is run 
-    userLiked(data);
+  data = {title, caption, where, to, time, token,user,name};
+  
+  //move this so that its only called when code is run 
+  userLiked(data);
 
-    const pubRoot = new axios.create({
-      baseURL: "http://localhost:3000/public"
-    });
+  const pubRoot = new axios.create({
+    baseURL: "http://localhost:3000/public"
+  });
 
-    let posted =  await pubRoot.post('/trips/', {
-      headers: {
-        Authorization: "Bearer " + token
-      }, 
-          data: {title, caption, where, to, time, token,user,name},
-          type: 'merge'
-    });
-    return false;
-  } else {
-      alert("YOU GOTTA SIGN IN CHUMP");
-      return true;
+  let posted =  await pubRoot.post('/trips/', { // trips chage this
+    headers: {
+      Authorization: "Bearer " + token
+    },
+        data: {title, caption, where, to, time, token,user,name},
+        type: 'merge'
+  })
+
+
+
+} else {
+    alert("YOU GOTTA SIGN IN CHUMP");
   }
 }
 
@@ -121,7 +115,7 @@ async function userLiked (data) {
     },
     data: { data, 
       type: 'merge' }
-  });
+  })
 
 }
-}
+
