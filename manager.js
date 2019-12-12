@@ -35,11 +35,16 @@ async function addUser(name,irlName,pass) {
   console.log("button test but in manager");
   try {
 
-    let response = await pubRoot.post(`/account/create`,{name,pass});
-    // add name functionality
-    let res2 = await pubRoot.post('/account/users/fuckfuckshit', {
-      data:{irlName},
-      type: 'merge'
+    let account = await axios({
+      method: "POST",
+      url: "http://localhost:3000/account/create",
+      data: {
+        name: name,
+        pass: pass,
+        data: {
+          realName: irlName
+        }
+      }
     })
 
     console.log("MADE A NEW ACCNT");

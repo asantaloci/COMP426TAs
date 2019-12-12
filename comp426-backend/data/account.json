@@ -51,6 +51,12 @@
     },
     "fuckfuckshit": {
       "passwordHash": "$2a$10$1yBfugrz8rxsfdEN6tkhk.quane9jX8azDs2APrPr08tDIxC105QG"
+    },
+    "ohmgod": {
+      "passwordHash": "$2a$10$/rSL.t9rtWDfIYXG9Bx9mumm9TQebbKcn6nGzfFsTGE/hQ8hbm8Ci",
+      "data": {
+        "realName": "TRIPPLAEFJSEKF"
+      }
     }
   }
 }
