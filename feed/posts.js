@@ -1,10 +1,5 @@
 console.log("posts.js is running");
 
-window.onload = function () {
-  $(document).on("click","#post", handlePost);
-  console.log("posts.js internal onload is running");
-}
-
 
 async function posts() {
   const pubRoot = new axios.create({
@@ -48,18 +43,39 @@ function renderpost(data) {
   `
 }
 
-const handlePost =  function(e) {
-  let title = $('#trip-name').val();
+const handlePost =  async function(e) {
+  //only able to post if LOGGED IN
+  if (localStorage.getItem('jwt') != null)
+  {let title = $('#trip-name').val();
   let caption = $('#caption').val();
   let where = $('#where').val();
   let to = $('#to').val();
   let time = $('#time').val();
+  let token = localStorage.getItem('jwt');
+
 
   console.log(title);
   console.log(caption);
   console.log(where);
   console.log(to);
   console.log(time);
+  console.log(token);
+  
+  
+  
+  
 
+  const pubRoot = new axios.create({
+    baseURL: "http://localhost:3000/public"
+  });
 
+  return await pubRoot.post('/trips/', {
+    headers: {
+      Authorization: "Bearer " + token
+    },
+    data: {title, caption, where, to, time, token},
+    type: "merge"
+  })} else {
+    alert("YOU GOTTA SIGN IN CHUMP");
+  }
 }

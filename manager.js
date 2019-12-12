@@ -104,6 +104,8 @@ async function getStatus() {
 
 //POSTING STUFF
 async function post() {
+  console.log(new post);
+  
   const pubRoot = new axios.create({
     baseURL: "http://localhost:3000/public"
     
