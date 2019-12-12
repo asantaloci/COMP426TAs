@@ -1,18 +1,31 @@
-console.log("posts.js is running");
+console.log("posts.js running");
 
+document.getElementById('post').onclick = function() {
+   handlePost();
 
+}
+// $( document ).ready(function() {
+//
+//
+//   handlePost();
+//   posts();
+//
+// });
 async function posts() {
   console.log("posts running");
-  
+
   const pubRoot = new axios.create({
-    baseURL: "http://localhost:3000"
+    baseURL: "http://localhost:3000/public"
   });
 
-  const result  = await pubRoot.get('/public');
-
-  //needs to load each one
-
-
+  const result  = await pubRoot.get('/trips');
+  console.log(result.data.result.length);
+  console.log(result.data.result.length);
+  for (let i = result.data.result.length-1; i>0;i--) {
+    // renderpost(result.data.result[0]);
+    console.log(renderpost(result.data.result[i]));
+// console.log(renderpost(result.data.result[14]));
+}
 }
 
 function renderpost(data) {
@@ -35,7 +48,7 @@ function renderpost(data) {
 
             <div class="caption col-md-5"><p>
 <span class="title">`+data.title+`</span><br />
-              `+data.caption+`
+              +data.caption+
 </p>
             </div>
               <div class="col-md-7 row" id="markers">
@@ -63,41 +76,41 @@ function renderpost(data) {
 }
 
 //make a new post
-const handlePost = async function(e) {
+ async function handlePost(e) {
   //only able to post if LOGGED IN
   if (localStorage.getItem('jwt') != null)
-  {let title = $('#trip-name').val();
-  let caption = $('#caption').val();
-  let where = $('#pac-input').val();
-  let to = $('#pac-input2').val();
-  let wheremark = $('#pac-input').val();
-  let tomark = $('#pac-input2').val();
-  let time = $('#time').val();
-  let token = localStorage.getItem('jwt');
-  let user = localStorage.getItem('user');
-  let name = localStorage.getItem('name');
+  {
+    let title = $('#trip-name').val();
+    let caption = $('#caption').val();
+    let where = $('#pac-input').val();
+    let to = $('#pac-input2').val();
+    let wheremark = $('#pac-input').val();
+    let tomark = $('#pac-input2').val();
+    let time = $('#time').val();
+    let token = localStorage.getItem('jwt');
+    let user = localStorage.getItem('user');
+    let name = localStorage.getItem('name');
 
-  data = {title, caption, where, to, time, token,user,name};
-  
-  //move this so that its only called when code is run 
-  userLiked(data);
+    data = {title, caption, where, to, time, token,user,name};
 
-  const pubRoot = new axios.create({
-    baseURL: "http://localhost:3000/public"
-  });
+    //move this so that its only called when code is run
+    userLiked(data);
 
-  let posted =  await pubRoot.post('/trips/', { // trips chage this
-    headers: {
-      Authorization: "Bearer " + token
-    },
-        data: {title, caption, where, to, time, token,user,name},
-        type: 'merge'
-  })
+    const pubRoot = new axios.create({
+      baseURL: "http://localhost:3000/public"
+    });
 
-
-
-} else {
-    alert("YOU GOTTA SIGN IN CHUMP");
+    let posted =  await pubRoot.post('/trips/', {
+      headers: {
+        Authorization: "Bearer " + token
+      },
+          data: {title, caption, where, to, time, token,user,name},
+          type: 'merge'
+    });
+    return false;
+  } else {
+      alert("YOU GOTTA SIGN IN CHUMP");
+      return true;
   }
 }
 
@@ -114,9 +127,8 @@ async function userLiked (data) {
       //jwt is the jwt from logging in
             "Authorization": "Bearer " + token
     },
-    data: { data, 
+    data: { data,
       type: 'merge' }
-  })
+  });
 
 }
-
