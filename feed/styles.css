@@ -9,7 +9,14 @@ html, body {
 }
 
 
-
+.heart {
+  float:right;
+  margin-right: 1em;
+  opacity: .5;
+}
+.heart:hover {
+opacity: 1;
+}
 
 /*  */
 #hidden-newPost {

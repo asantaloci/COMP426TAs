@@ -106,3 +106,16 @@ async function getStatus() {
   }
 
 }
+
+async function resetPublicJSON() {
+  console.log("deleting everything");
+  let jwt = localStorage.getItem('jwt');
+  return await axios({
+    method: "DELETE",
+    url: "http://localhost:3000/public/trips/",
+    headers: {
+      //jwt is the jwt from logging in
+            "Authorization": "Bearer " + jwt
+    }
+  })
+}
