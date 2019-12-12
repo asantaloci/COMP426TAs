@@ -5,7 +5,7 @@ html,body {
 .account {
   margin:2em;
   font-size: 3em;
-  color:white;
+    color: #e6e7ff;
 }
 
 .delete {
@@ -17,4 +17,33 @@ background-color: #4422ab;
 }
 img {
   margin: 1.5em 1.5em 1.5em 1.5em;
+}
+
+.liked {
+  margin:3em;
+}
+.liked-section {
+    color: #e6e7ff;
+}
+.logout {
+  float: right;
+  background-color: transparent;
+  color: #e6e7ff;
+}
+
+.logout:hover {
+  float: right;
+  background-color: transparent;
+  color:pink;
+}
+.clear {
+  float: right;
+  background-color: transparent;
+  color: #e6e7ff;
+}
+
+.clear:hover {
+  float: right;
+  background-color: transparent;
+  color:pink;
 }

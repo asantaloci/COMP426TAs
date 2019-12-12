@@ -13,16 +13,24 @@
 
   </head>
   <body>
-
+<button type="logout" id="logout" class="btn logout" onclick="logout()">Logout</button>
 <a href="feed.html" class="back"id="back"><img src="back-arrow.png" style="width:2em"/></a>
 <h2 class="account">
-  Your Account
+  Hello @<span class="private-user">randomuser</span>
 </h2>
 
-<button type="delete" id="delete-account" class="btn delete">Delete Account</button>
-<button type="logout" id="logout" class="btn logout" onclick="logout()">Logout</button>
-<button type="clear" id="clear" class="btn clear" onclick="resetPublicJSON()">Clear JSON</button>
+<!-- <button type="delete" id="delete-account" class="btn delete">Delete Account</button> -->
 
+<button type="clear" id="clear" class="btn clear" onclick="resetPublicJSON()">Delete Like History</button>
+<!-- for the button above, do reset user history? idk -->
+
+
+<!-- below is the html for the list. idk if this is supposed to be on the js so if so just copy paste this stuff -->
+<div class="liked">
+ <h2 class="liked-section">Posts you've Liked:</h2>
+<!--<h4 class="liked-title">Title of post</h4>
+<h6 class="liked-user">@whoisit</h6> -->
+</div>
 
 
 
