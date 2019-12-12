@@ -1,2 +1,27 @@
 {
+  "trips": [
+    {
+      "title": "Test Trip",
+      "caption": "First TRIP!!!!",
+      "where": "",
+      "to": "",
+      "time": ""
+    },
+    {
+      "title": "TEST 2",
+      "caption": "DESCRIPTION",
+      "where": "",
+      "to": "",
+      "time": "TIME (so much)",
+      "token": null
+    },
+    {
+      "title": "IM SO PLEASED",
+      "caption": "ITS WORKING",
+      "where": "",
+      "to": "",
+      "time": "TIME TIME TIME",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsImlhdCI6MTU3NjEwODg1NiwiZXhwIjoxNTc4NzAwODU2fQ.SL41bnFsfF_ciS1fmTNoFeop94-dFFkb6QEwJEXNVkM"
+    }
+  ]
 }

@@ -37,7 +37,10 @@ async function addUser(user,name,pass) {
 
     let response = await pubRoot.post(`/account/create`,{name,pass});
     // add name functionality
-
+    let res2 = await pubRoot.post('/account/create', {
+      data:{name},
+      type: 'merge'
+    })
 
     console.log("MADE A NEW ACCNT");
     document.location.href = '/feed/feed.html';
@@ -70,6 +73,7 @@ async function login(name,pass){
    return false;
  }
 }
+
 
 function logout() {
   localStorage.removeItem('jwt');
