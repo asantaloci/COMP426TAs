@@ -33,7 +33,7 @@
                         <div class="field">
                             <div class="control">
                               <p class="center">New to Tripshare? <span><a class="center" href="create.html">Sign Up Now.</a></span></p>
-
+                              <p class="center"> <span><a class="center" href="feed/feed.html">Continue without an account</a></span></p>
                             </div>
                         </div>
 
@@ -55,16 +55,16 @@
       <!-- this checks and sees if we are signed in already or not   -->
       <script type="text/javascript">
         console.log("START");
-      
+
         if (localStorage.getItem('jwt') != null) {
-          
+
           getStatus();
           console.log("user active");
 
           document.location.href = '/feed/feed.html';
         } else{
           console.log("FINISHED LOADING");
-          
+
         }
       </script>
 

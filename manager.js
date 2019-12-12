@@ -48,7 +48,7 @@ async function addUser(name,irlName,pass) {
     })
 
     console.log("MADE A NEW ACCNT");
-    document.location.href = '/feed/feed.html';
+    document.location.href = '/index.html';
     return true;
   } catch (error)
  {
