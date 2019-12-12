@@ -1,0 +1,141 @@
+html,body {
+  font-family: 'Rubik', sans-serif;
+
+}
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-blend-mode: lighten;
+  background-color:#696fc2;
+  background-image: url('https://media.giphy.com/media/3oxRmD9a5pLTOOLigM/source.gif');
+background-size: cover;
+background-position: center;
+}
+/* https://media.giphy.com/media/l0HlKQPTHOGNUPTZm/source.gif */
+
+#login .login-card {
+  background: #fff;
+  width: 30rem;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.11);
+}
+#login .login-card .card-title {
+  background-color: #4422ab;
+  padding: 4rem;
+}
+#login .login-card .card-title h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+}
+#login .login-card .content {
+  padding: 3rem 2.5rem 5rem;
+}
+#login .login-card #signup-name,#signup-username,#signup-password, #login-username, #login .login-card #login-password {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+  padding: 0.25rem 0;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  transition: all .5s;
+}
+#login .login-card #signup-username:hover,#login-username:hover, #login .login-card #login-password:hover, #signup-password:hover {
+  border-color: #7a7a7a;
+}
+#login .login-card #signup-username:active, #login-username:active, .login-card #signup-username:focus, #login .login-card #login-password:active, #signup-password:active, #login .login-card #login-password:focus, #login .login-card #signup-password:focus {
+  border-color: #4B9CD3;
+}
+#login .login-card .checkbox {
+  color: #b5b5b5;
+  font-size: 0.8rem;
+}
+#login .login-card .checkbox span {
+  margin-left: 0.5rem;
+}
+#login .login-card a {
+  font-size: 0.8rem;
+}
+#login .login-card .options {
+  color: #b5b5b5;
+  margin-bottom: 1.5rem;
+}
+#login .login-card button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #4422ab;
+  border-radius: 4rem;
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 2px solid #4422ab;
+  padding: 0.9rem 0 1.1rem;
+  transition: color .5s, border-color .5s;
+}
+#login .login-card button:hover, #login .login-card button:focus {
+  transition: .5s, border-color .5s;
+transition: 1s, border-color 1s;
+  color: white;
+
+  border-color: #4422ab;
+  background-color: #4422ab;
+}
+#login .login-card button:active {
+  transition: .5s, border-color .5s;
+  transform: translateY(1px);
+}
+
+label {
+  cursor: pointer;
+}
+
+.regular-checkbox {
+  display: none;
+}
+
+.regular-checkbox + label {
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 7px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.regular-checkbox:checked + label {
+  background-color: #e9ecee;
+}
+
+.regular-checkbox:checked + label:after {
+  content: '\2714';
+  font-size: 11px;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  color: #b5b5b5;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+.center {
+  margin:1em 0em 0em 0em;
+  text-align: center;
+  font-size: 1em;
+
+}
+#login .login-card a{
+    font-size: 1em;
+    color: #4422ab;
+}
+a :hover {
+  color: white;
+  transition: ease-out 1s;
+  transition: .5s;
+}

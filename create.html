@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Create Account</title>
+
+        <!-- Include links to CSS stylesheets below -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="#" />      
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <div id="login">
+            <div class="login-card">
+                <div class="card-title">
+                    <h1>TripShare</h1>
+                </div>
+
+                <div class="content">
+                    <form id="signin-form">
+                        <p class="label">name</p>
+                        <input id="signup-name" type="name" name="name" title="name" placeholder="name" required>
+                        <p class="label">username</p>
+                        <input id="signup-username" type="username" name="username" title="username" placeholder="username" required autofocus>
+                        <p class="label">password</p>
+                        <input id="signup-password" type="password" name="password" title="password" placeholder="password" required>
+
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" id="create-submit" class="btn btn-primary">Create Account</button>
+                            </div>
+                        </div>
+
+
+                        <div class="field">
+                            <div class="control">
+                                <p id="message"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Include links to JavaScript files below -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src = "node_modules/axios/dist/axios.min.js"></script>
+        <script src="load.js"></script>
+        <script src="manager.js"></script>
+
+      <!-- this checks and sees if we are signed in already or not   -->
+      <script type="text/javascript">
+        console.log("START");
+      
+        if (localStorage.getItem('jwt') != null) {
+          
+          getStatus();
+          console.log("user active");
+
+          document.location.href = '/feed/feed.html';
+        } else{
+          console.log("FINISHED LOADING");
+          
+        }
+      </script>
+
+        <script src="render.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    </body>
+</html>
