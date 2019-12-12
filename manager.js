@@ -5,7 +5,7 @@ const pubRoot = new axios.create({
 //LOGIN STUFF
 const submitLogin = function(event){
   event.preventDefault();
-  
+
   let username = document.getElementById('login-username').value;
   let password = document.getElementById('login-password').value;
   console.log(username+', '+password);
@@ -14,7 +14,7 @@ const submitLogin = function(event){
     return false;
   } else {
     console.log("nice");
-    return true; 
+    return true;
   }
 }
 
@@ -62,19 +62,22 @@ async function addUser(name,irlName,pass) {
 async function login(name,pass){
   try {
     let response = await pubRoot.post(`/account/login`,{name,pass});
-    
+
     let jwt = response['data']['jwt'];
     console.log("JWT is: "+ jwt);
-    
+
     localStorage.setItem('jwt', jwt);
+    localStorage.setItem('user', name);
+    localStorage.setItem('name', response['data']['data']['realName'])
+
     document.location.href = '/feed/feed.html';
     return true;
   } catch (error)
  {
    alert("User/Pass is incorrect!");
-   
+
    console.log("NO SUCH USER");
-   
+
    return false;
  }
 }
@@ -99,10 +102,8 @@ async function getStatus() {
     })
   } else {
     console.log("PLEASE PROVIDE PROPER JWT");
-    
+
     return false;
   }
 
 }
-
-/********************************************************************************* */
