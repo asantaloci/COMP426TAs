@@ -57,6 +57,12 @@
       "data": {
         "realName": "TRIPPLAEFJSEKF"
       }
+    },
+    "yes": {
+      "passwordHash": "$2a$10$ZMJb9WeywCKbi1J1BAnNAuEs.A53HxlmcOudfAriJ7RJXnPdbqNs.",
+      "data": {
+        "realName": "shit"
+      }
     }
   }
 }

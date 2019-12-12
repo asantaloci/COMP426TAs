@@ -2,29 +2,19 @@ console.log("posts.js is running");
 
 
 async function posts() {
+  console.log("posts running");
+  
   const pubRoot = new axios.create({
     baseURL: "http://localhost:3000/public"
   });
 
   const result  = await pubRoot.get('/trips');
-  // console.log(result.data);
 
   // result.data is an array of trips
-  for (let i = 8; i<result.data.result.length;i++) {
-    console.log(result.data.result[i]);
-    console.log(result.data.result[8]);
+  for (let i = 0; i<2;i++) {
     renderpost(result.data.result[i]);
 
   }
-
-  // for (let i = result.data.result.length-1; i>result.data.result.length-30;i--) {
-  //   console.log(result.data.result[i]);
-  //   renderpost(result.data.result[i]);
-  // }
-
-// renderpost(result.data.result[8]);
-
-//make lsting listing cancel listing submit
 
 
 }
@@ -68,7 +58,6 @@ function renderpost(data) {
           </div>
   </div>
   `
-// $root append(head)
 
   const $root = $('#root');
   console.log(head);
