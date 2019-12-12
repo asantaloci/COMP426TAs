@@ -238,7 +238,11 @@ float: right;
     color: #4422ab;
     margin-left: 1em;
   }
-
+  .title {
+    font-weight: bold;
+    color: #eb73c1;
+    font-size: 1.4em;
+  }
 a {
   text-decoration: none;
   color: #232323;
@@ -572,7 +576,17 @@ width:3em;
 
 font-size: 1.5em;
 }
+.post {
+  /* margin: 1em; */
+  padding: 1em;
+  border-radius: .5em;
+}
 @media only screen and (min-width: 740px){
+  .title {
+    font-weight: bold;
+    color: #eb73c1;
+    font-size: 2em;
+  }
   .markerz{
   width:5em;
   }
